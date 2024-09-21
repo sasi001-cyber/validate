@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValYdate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            background-color:#252A34 ;
+        }
+        a{
+    color: aliceblue;
+   }
+   a:hover{
+    color: rgb(0, 136, 254);
+   }
+   
+   .navbar{
+    background-color: #ffffff3e;
+    opacity: 8;
+    width: 100vw;
+    
+    
+   }
+   #S{
+    display: flex;
+    /* justify-content: space-between; */
+   }
+   .navbar-toggler{
+    background-color: aliceblue;
+   }
+   .nav-item{
+    padding-inline: 9px;
+   }
+        
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content:center ;
+            align-items: center;
+            /* border: 2px solid red; */
+            border-radius: 10px;
+            /* background-color: rgba(0, 255, 221, 0.34); */
+            filter: blur(20);
+            width: 600px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.247);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+z-index: 1;
+            
+        }
+        .card-1{
+            /* background-color: #0bfffb08; */
+            opacity: 2;
+            /* border-radius:20px ; */
+            padding: 10px;
+            color: #ffffff;
+            font-weight: bolder;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        .card-1::after{
+            content: 'Hostel Detail';
+            position: absolute;
+            right: 0;
+            top:0;
+            width: max-content;
+            padding: 12px;
+            padding-inline: 100px;
+            border-top-left-radius: 248px;
+border-top-right-radius: 3px;
+border-bottom-left-radius: 248px;
+            height:max-content;
+            background-color: #ff2e62;
+            
+        }
+        
+        
+        .card-ed{
+            display: flex;
+            /* flex-direction: column; */
+            justify-content:center ;
+            align-items: center;
+            /* background: rgb(0, 255, 221); */
+            padding: 20px;
+        }
+        #input{
+            
+            border: none;
+            outline:none;
+            border-radius: 10px;
+        }
+        .btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 17px;
+  padding-inline: 10px ;
+  padding-block:2px ;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.nav-bar{
+    background-color: #4c43cdbb;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #FFFFFF;
+    padding: 8px;
+    width: 100vw;
+}
+.ul-list .ul-items{
+    /* padding: 20px;
+    display: none; */
+
+}
+.fex{
+    display: flex;
+
+}
+.upload{
+    padding: 6px;
+    background-color: none;
+    background: none;
+    border:2px solid salmon;
+    border-radius: 10px;
+    color: rgb(255, 253, 253);
+    cursor: pointer;
+}
+
+input{
+    color: #000000;
+    margin: 9px;
+}
+
+@media only screen and (max-width: 600px) {
+ .card-1{
+    flex-direction: column;
+ }
+ .card{
+    height: 500px;
+    padding: 20px;
+ }
+}
+
+    </style>
+</head>
+<body>
+    <nav  class="navbar navbar-expand-lg navbar-light "  id="S"style="color: rgb(255, 255, 255);">
+         <a class="navbar-brand" href="#" style=" font-size: 27px; font-weight: bolder;">Val<span style="color: red; font-weight: bolder;">Y</span>date</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-auto me-auto mb-2 mb-lg-0" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+                <form action="/" method="post" >  
+                    <!-- <input type="image" src="https://illustoon.com/photo/7800.png" width="30px" > -->
+                      <input type="submit" name="upvote" value="Home" class="upload" />
+               </form>
+            </li>
+            <li class="nav-item active">
+                <form action="/c" method="post" >  
+                    <!-- <input type="image" src="https://illustoon.com/photo/7800.png" width="30px" > -->
+                    <input type="submit" name="upvote" value="UploadFile" class="upload" />
+               </form>
+            </li>
+            
+            <li class="nav-item">
+                <form action="/Delete" method="post" >  
+                    <!-- <input type="image" src="https://illustoon.com/photo/7800.png" width="30px" > -->
+                    <input type="submit" name="Search" value="DeleteFiles" class="upload" /></l1>
+                    </form>
+
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+    
+    <div class="container">
+   
+    <div class="card-ed">
+        <form action="/post" method="post">
+            <input type="search" name="search" id="input">
+            <button class="btn">Search</button>
+        </form>
+        
+</div>
+       
+<div style="display: flex;justify-content: center;">
+    <% data.forEach(function(ele) { %>
+        <div>
+            <div class="card" >
+                
+                <div class="card-1" >
+                    
+                    
+                    <p> <img src="<%=ele.img %>" width="200px"></p>
+                    <div>
+                       
+                   <p><label>Name:</label> <span><%= ele.NAME %></span></p> 
+                   <p><label>Roll No:</label><span><%= ele.REF_NO %></span></p> 
+                   <p><label>Room No:</label><span><%= ele.ROOM_NO %></span></p>
+                   <p><label>Fess:</label><span><%= ele.FEES %></span></p> 
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

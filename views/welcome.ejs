@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValYdate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Poppins&family=Sansita+Swashed&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+:root{
+    --primary: #cc324b;
+}
+html,body{
+    overflow: hidden;
+    scroll-behavior: smooth;
+    background-color: #252A34 ;
+}
+
+.logo img{
+    margin-left: 20px;
+    height: 60px;
+    background: transparent;
+    border: 4px solid var(--primary);
+    border-radius: 8px;
+    margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+.navbar{
+    background-color: #ffffff3e;
+    opacity: 8;
+    width: 100vw;
+    
+    
+   }
+   #S{
+    display: flex;
+    /* justify-content: space-between; */
+   }
+   .navbar-toggler{
+    background-color: aliceblue;
+   }
+   .nav-item{
+    padding-inline: 9px;
+   }
+        
+
+/* CSS */
+.button-90 {
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 100px;
+  background-color: #4C43CD;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
+  z-index: 1000;
+}
+.card{
+    width: 300px;
+    height: 350px;
+    background-color: #cc324b;
+    background-image: url('data:image/png;base64,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');
+    
+    background-size: cover;
+    /* background-repeat: none; */
+    background-position: center;
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card::after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: #00000077;
+    z-index: -1;
+    filter: blur(1px);
+    border-radius:10px ;
+    
+    
+}
+.card-2{
+    background-image:url("https://www.pngitem.com/pimgs/m/559-5590045_search-magnifier-search-icon-no-background-hd-png.png") ;
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+@media only screen and (max-width: 600px) {
+    section{
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 20px;
+    }
+.card{
+    margin-top: 10px;
+}
+}
+
+    </style>
+</head>
+<body>
+    <nav  class="navbar navbar-expand-lg navbar-light "  id="S"style="color: rgb(255, 255, 255);">
+         <a class="navbar-brand" href="#" style=" font-size: 27px; font-weight: bolder;">Val<span style="color: red; font-weight: bolder;">Y</span>date</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-auto me-auto mb-2 mb-lg-0" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+                Home
+            </li>
+            <li class="nav-item">
+                <a href="tel:044 2680 0050" style="color: white;text-decoration: none;">Contact Us</a> 
+            </li>
+            
+            
+          </ul>
+        </div>
+      </nav>
+    <section>
+
+        <div class="card">
+            <form action="/c" method="post"><button class="button-90">Upload Excel file 📂</button></form>
+        </div>
+        <div class="card card-2">
+        <form action="/post" method="post"><button class="button-90">Search 🔍</button> </form>
+    </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
